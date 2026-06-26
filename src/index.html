@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Mobile Browser</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="top-bar">
+      <button id="backBtn">⬅</button>
+      <button id="forwardBtn">➡</button>
+      <button id="reloadBtn">🔄</button>
+      <button id="homeBtn">🏠</button>
+
+      <input id="urlInput" type="text" placeholder="Enter URL (https://...)" />
+      <button id="openBtn">Go</button>
+    </div>
+
+    <div class="browser-container">
+      <webview id="webview" src="https://example.com"></webview>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

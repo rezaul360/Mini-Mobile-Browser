@@ -1,0 +1,46 @@
+{
+  "name": "mini-mobile-browser",
+  "productName": "Mini Mobile Browser",
+  "version": "1.0.0",
+  "description": "A lightweight Electron-based mobile-style desktop browser for testing and previewing websites in a fixed mobile viewport.",
+  "author": "Rezaul Karim",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build": "electron-builder",
+    "dist": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.rezaul.minibrowser",
+    "productName": "Mini Mobile Browser",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "keywords": [
+    "electron",
+    "browser",
+    "mobile-view",
+    "webview",
+    "desktop-app",
+    "mini-browser"
+  ],
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}
